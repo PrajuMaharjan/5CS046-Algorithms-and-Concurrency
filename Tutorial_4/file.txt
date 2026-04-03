@@ -1,1 +1,2 @@
-Hello World
+This is write mode.
+This is append mode.
