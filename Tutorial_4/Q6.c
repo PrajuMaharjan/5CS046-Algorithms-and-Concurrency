@@ -6,8 +6,8 @@ int main(){
  FILE *fptr;
  char input[50];
  
- printf("Enter a string.");
- scanf("%s",input);
+ printf("Enter a string : ");
+ scanf("%[^\n]",input);
  
  fptr=fopen("output.txt","w");
  fputs(input,fptr);
