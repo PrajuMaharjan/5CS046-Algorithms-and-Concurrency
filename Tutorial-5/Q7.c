@@ -15,7 +15,7 @@ typedef struct{
  Student s;
  
  printf("Enter Roll No.,Name and marks seperated by commas : ");
- scanf("%d,%s,%d",&roll_no,name,&marks);
+ scanf("%d,%[^,],%d",&roll_no,name,&marks);
  
  s.roll_number=roll_no;
  strcpy(s.name,name);
@@ -25,7 +25,7 @@ typedef struct{
 }
 
 void display_info(Student s){
- printf("Roll No. : %d\n",s.roll_number);
+ printf("\nRoll No. : %d\n",s.roll_number);
   printf("Name : %s\n",s.name);
   printf("Marks : %d\n",s.marks);
 }
