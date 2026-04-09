@@ -1,0 +1,1 @@
+//2.Apply a negative filter on an image file. This is the process of reversing the RGB values. For example, if the Red value of the pixel is 100, the inverse is 155. NOTE: 0 is minimum and 255 is maximum. 
