@@ -3,22 +3,22 @@
 // Increase in salary		$50	$100	$150
 
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 typedef struct{
  char name[20];
  int salary;
  int work_hours;
-}Employee;
+} Employee;
 
 int increase_salary(int hours,int salary){
- if(hours<=8){
-  return salary+50;
- }else if(hours<=10){
+ if(hours>=12){
+  return salary+150;
+ }else if(hours>=10){
   return salary+100;
+ }else if(hours>=8){
+  return salary+50; 
  }else{
-  return salary+150; 
+  return salary;
  }
 }
 
@@ -27,14 +27,15 @@ int main(){
  int new_salary;
  
  for(int i=0;i<5;i++){
-  scanf("%[^,],%d,%d",e[i].name,&e[i].salary,&e[i].work_hours);
+  printf("Enter name,salary,work hours for Employee No. %d : ",i+1);
+  scanf(" %[^,],%d,%d",e[i].name,&e[i].salary,&e[i].work_hours);
  }
  
- printf("Employee Details : \n");
+ printf("\nEmployee Details : \n");
  
  for(int i=0;i<5;i++){
   new_salary=increase_salary(e[i].work_hours,e[i].salary);
-  printf("Name : %s\nOld Salary : %d\nWork Hours : %d\nNew Salary : 	    %d\n",e[i].name,e[i].salary,e[i].work_hours,new_salary);
+  printf("Name : %s\nOld Salary : %d\nWork Hours : %d\nNew Salary : %d\n",e[i].name,e[i].salary,e[i].work_hours,new_salary);
  }
  
  
