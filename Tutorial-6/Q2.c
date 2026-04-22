@@ -9,7 +9,7 @@ int main(){
     unsigned width, height;
     unsigned error;
 
-    error=lodepng_decode32_file(&image,&width,&height,"Image.png");
+    error=lodepng_decode32_file(&image,&width,&height,"image.png");
     if(error){
         printf("Decode error %u: %s\n", error, lodepng_error_text(error));
         return 1;
